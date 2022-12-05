@@ -7,9 +7,9 @@ async function fetchProvides() {
 }
 
 function Login() {
-    const [providers, setProviders] = useState()
+    const [providers, setProviders] = useState<Object>()
     useEffect(() => {
-        fetchProvides().then((data) => setProviders(data))
+        fetchProvides().then((data: any) => setProviders(data))
     }, [])
     console.log(providers)
   return (
